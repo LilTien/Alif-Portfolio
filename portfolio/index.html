@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body{
+            font-family: 'Inter';
+            height: 100vh;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            padding:  0px 150px;
+            grid-template-columns: 1fr 1fr;
+        }
+        .left-container{
+            text-align: justify;
+        }
+        .left-container .hi-there{
+            letter-spacing: 3px;
+        }
+        .left-container .my-name{
+            margin-bottom: 10px;
+        }
+        .left-container .studies{
+            font-weight: 500;
+            background-color: rgb(185, 67, 185);
+            width: 300px;
+            text-align: center;
+            border-radius: 25px;
+            color: white;
+            padding: 3px;
+            margin-bottom: 10px;
+        }
+        .left-container .description{
+            font-weight: 200;
+        }
+        .right-container .image-container img{
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 25px;
+            position: absolute;
+            top: 185px;
+            right: 300px;
+            -webkit-transition:all 0.3s linear;
+            transition:all 0.3s linear;
+        }
+        .right-container .image-container img:hover{
+            cursor: pointer;
+            -webkit-transform:scale(1.1);
+            transform:scale(1.05);
+            
+        }
+        .big-square{
+            width: 350px;
+            height: 350px;
+            border-radius: 25px;
+            background-color: rgba(128, 128, 128, 0.308);
+            position: absolute;
+            right: 270px;
+            top: 150px;
+        }
+        .social-media{
+            display: flex;
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .social-media .container img{
+            width: 30px;
+            cursor: pointer;
+            
+        }
+        .my-project{
+            background-color: purple;
+            color: white;
+            padding-top: 60px;
+        }
+        .my-project .title h1{
+            margin-bottom: 70px;
+            font-size: 41px;
+        }
+        .my-project .project{
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 200px;
+        }
+        .my-project .project .title{
+            font-size: 24px;
+            letter-spacing: 5px;
+            margin-bottom: 30px;
+        }
+        .my-project .image-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+        }
+        .my-project .image-container img{
+            width: 400px;
+            height: 225px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        .language .description{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .language .icon img{
+            width: 30px;
+        }
+        .second.project{
+            text-align: left;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .second.project .description{
+
+            justify-content: left;
+        }
+        .second.project .right.container img{
+            height: 430px;
+            width: 225px;
+            position: relative;
+            left: 70px;
+            bottom: 30px;
+            rotate: 5deg;
+            box-shadow: 5px 5px gray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="left-container">
+            <div class="hi-there">
+                <span style="font-size: 21px;">HI THERE!</span>
+            </div>
+            <div class="my-name" style="font-size: 31px;">
+                <span style="color: black; font-weight: 700;">I'M </span><span style="color: purple; font-weight: 700;">AHMAD ALIF</span>
+            </div>
+            <div class="studies">
+                Diploma Computer Science Student
+            </div>
+            <div class="description">
+                Motivated Computer Science student (CGPA: 3.85) from Universiti Teknologi MARA (UiTM), recognized for consistent academic excellence and technical expertise in web and app development. Experienced in developing innovative systems with strong teamwork and problem-solving skills. Seeking a 6-month internship (March–August 2025) as a web or app developer to contribute to impactful projects.
+            </div>
+            <div class="square">
+
+            </div>
+            <div class="sec-square">
+
+            </div>
+            <div class="big-square">
+
+            </div>
+            <div class="title-social-media" style="margin-top: 10px;">
+                <span style="font-size: 12px;">Contact Me:</span>
+            </div>
+            <div class="social-media">
+                <div class="phone-number container" onclick="copyToClipboard('60183864379', 'Phone number copied!')">
+                    <img src="./images/phone-call.png" alt="">
+                </div>
+                <div class="my-resume container" onclick="downloadResume()">
+                    <img src="./images/resume.png" alt="">
+                </div>
+                <div class="linkedin container">
+                    <a href="https://www.linkedin.com/in/ahmad-alif-a2593021a">
+                        <img src="./images/linkedin.png" alt="">
+                    </a>
+                </div>
+                <div class="github container">
+                    <a href="https://github.com/LilTien">
+                        <img src="./images/github (1).png" alt="">
+                    </a>
+                </div>
+                <div class="email container" onclick="copyToClipboard('ahmadalif1108@gmail.com', 'Email copied!')">
+                    <img src="./images/email.png" alt=""">
+                </div>
+
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="image-container">
+                <img src="./images/photo_2024-03-20_17-19-19.jpg" alt="mobile app">
+            </div>
+        </div>
+    </main>
+    <div class="my-project">
+        <div class="title" style="width: 100%; text-align: center;">
+            <h1>My Project</h1>
+        </div>
+        <div class="first project">
+            <div class="title">
+                <span style="font-weight: 600;" >Income & Expenses Tracker</span>
+            </div>
+            <div class="description">
+                <p><strong>Income and Expenses Tracker</strong> is a comprehensive system designed to manage and monitor financial transactions across multiple branches. It enables admins to add users, set budgets, and approve additional budget requests. Each branch uploads daily sales data, providing real-time insights into income and expenses. The system streamlines financial oversight, enhances accountability, and ensures efficient budget control for the entire organization.</p>
+            </div>
+            <div class="language">
+                <h3>Technologies Used</h3>
+                <div class="description" ">
+                    <div class="html icon">
+                        <img src="./images/icon/html.png" alt="">
+                    </div>
+                    <div class="css icon">
+                        <img src="./images/icon/css-3.png" alt="">
+                    </div>
+                    <div class="javascript icon">
+                        <img src="./images/icon/js.png" alt="">
+                    </div>
+                    <div class="php icon">
+                        <img src="./images/icon/web.png" alt="">
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./images/incomAndExpenses/branch.png" alt="">
+                <img src="./images/incomAndExpenses/budget.png" alt="">
+                <img src="./images/incomAndExpenses/budgetList.png" alt="">
+                <img src="./images/incomAndExpenses/expenses.png" alt="">
+                <img src="./images/incomAndExpenses/ranking.png" alt="">
+                <img src="./images/incomAndExpenses/user.png" alt="">
+                <img src="./images/incomAndExpenses/dashboard.png" alt="">
+                <img src="./images/incomAndExpenses/login.png" alt="">
+            </div>
+        </div>
+        <div class="second project">
+            <div class="left-container">
+                <div class="title">
+                    <span>Personal Library ( In Progress )</span>
+                </div>
+                <div class="description">
+                    <p><strong>Personal Library App</strong> built with React Native is a feature-rich tool for book lovers to organize and track their collections. It allows users to categorize books into sections like "Owned," "Read," and "Completed," with options for searching, tagging favorites, and adding personal notes. The intuitive interface ensures seamless navigation, while user-created sections provide a personalized organization system, making it easy to manage and enjoy your library on the go.</p>
+                </div>
+                <div class="language">
+                    <h3>Technologies Used</h3>
+                    <div class="description" ">
+                        <div class="javascript icon">
+                            <img src="./images/icon/js.png" alt="">
+                        </div>     
+                        <div class="react icon">
+                            <img src="./images/icon/atom.png" alt="">
+                        </div>     
+                        <div class="firebase icon">
+                            <img src="./images/icon/firebase.png" alt="">
+                        </div>     
+                    </div>
+                </div>
+            </div>
+            <div class="right container">
+                <div class="image-container">
+                    <img src="./images/mobile-app.jpg" alt="mobile app">
+                </div>
+            </div>
+        </div>
+        <div class="third project">
+            <div class="title">
+                <span>Cinema Ticket System</span>
+            </div>
+            <div class="description">
+                <p>
+                    <strong>Cinema Ticket Booking System</strong>, developed using Visual Basic, was a user-friendly application designed to streamline the process of purchasing movie tickets. It featured an intuitive interface for selecting movie titles, showtimes, and seat preferences. The system allowed users to view ticket prices, make secure bookings, and receive confirmation details efficiently. This project demonstrated your ability to create practical, real-world software solutions while enhancing customer convenience in a cinema environment.
+                </p>
+            </div>
+            <div class="language">
+                <h3>Technologies Used</h3>
+                <div class="description" ">
+                    <div class="visual-basic icon">
+                        <img src="./images/icon/vb-file.png" alt="">
+                    </div>     
+                    <div class="net icon">
+                        <img src="./images/icon/website.png" alt="">
+                    </div>     
+                    <div class="ms-access icon">
+                        <img src="./images/icon/microsoft-access.png" alt="">
+                    </div>     
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="./images/cinemaSystem/chooseSeat.png" alt="">
+                <img src="./images/cinemaSystem/main-page.png" alt="">
+                <img src="./images/cinemaSystem/membership.png" alt="">
+                <img src="./images/cinemaSystem/movieDetail.png" alt="">
+                </div>
+        </div>
+        <div class="forth project">
+            <div class="title">
+                <span>Event Ticket Selling System</span>
+            </div>
+            <div class="description">
+                <p>
+                    <strong>Event Ticketing System</strong>, built using the Bootstrap framework, provided a responsive and modern platform for managing event ticket sales. It allowed event organizers to list events with details like date, time, and venue, while customers could easily browse, select, and purchase tickets. The system's sleek design ensured a seamless user experience across devices, showcasing your ability to create functional and visually appealing web applications.
+                </p>
+            </div>
+            <div class="language">
+                <h3>Technologies Used</h3>
+                <div class="description" ">
+                    <div class="html icon">
+                        <img src="./images/icon/html.png" alt="">
+                    </div>
+                    <div class="css icon">
+                        <img src="./images/icon/css-3.png" alt="">
+                    </div>
+                    <div class="javascript icon">
+                        <img src="./images/icon/js.png" alt="">
+                    </div>
+                    <div class="php icon">
+                        <img src="./images/icon/web.png" alt="">
+                    </div>
+                    <div class="bootstrap icon">
+                        <img src="./images/icon/bootstrap.png" alt="">
+                    </div>
+                    
+                    
+                </div>
+            <div class="image-container" style="margin-bottom: 100px;">
+                <img src="./images/ticketSystem/Screenshot 2025-01-09 014007.png" alt="">
+                <img src="./images/ticketSystem/Screenshot 2025-01-09 014113.png" alt="">
+                <img src="./images/ticketSystem/Screenshot 2025-01-09 014232.png" alt="">
+                </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer" style="background-color: black; width: 100%; height: 40px;"></div>
+    </footer>
+    <script>
+        function copyToClipboard(value, message) {
+            const tempInput = document.createElement('input');
+            document.body.appendChild(tempInput);
+            tempInput.value = value;
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert(message);
+        }
+    
+        function downloadResume() {
+            const resumeUrl = './pdf/Ahmad_Alif_Resume.pdf'; // Update this path to your resume file
+            const link = document.createElement('a');
+            link.href = resumeUrl;
+            link.download = 'resume.pdf';
+            link.click();
+        }
+    </script>
+</body>
+</html>
